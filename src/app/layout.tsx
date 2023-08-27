@@ -1,6 +1,7 @@
 import ReduxProvider from '@/redux/ReduxProvider'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ReduxProvider>
+          <ul className='flex'>
+            <li className="mr-6">
+              <Link href='/' className="text-white">Home</Link>
+            </li>
+            <li className="mr-6">
+              <Link href='/counter' className="text-white">counter</Link>
+            </li>
+            <li className="mr-6">
+              <Link href='/todo' className="text-white">todo</Link>
+            </li>
+          </ul>
           {children}
         </ReduxProvider>
       </body>
