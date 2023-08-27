@@ -1,6 +1,6 @@
 "use client"
 import cn from 'classnames'
-import button from '@/components/button.module.scss'
+import button from '@/styles/button.module.scss'
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement, IState, reset } from '@/redux/Slice';
 
